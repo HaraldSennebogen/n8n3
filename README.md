@@ -6,7 +6,7 @@ This template deploys a self-hosted version of [n8n](https://n8n.io/). Internall
 
 ## ✨ Features
 
-- n8n
+- n8n 
 - PostgreSQL
 
 ## 💁‍♀️ How to use
