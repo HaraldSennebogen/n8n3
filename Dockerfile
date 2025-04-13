@@ -1,5 +1,15 @@
 FROM n8nio/n8n:latest
 
+USER root
+
+# ➕ ImageMagick installieren
+RUN apt-get update && \
+    apt-get install -y imagemagick && \
+    apt-get clean
+
+USER node
+
+# Argumente für Postgres
 ARG PGPASSWORD
 ARG PGHOST
 ARG PGPORT
@@ -13,9 +23,8 @@ ENV DB_POSTGRESDB_PORT=$PGPORT
 ENV DB_POSTGRESDB_USER=$PGUSER
 ENV DB_POSTGRESDB_PASSWORD=$PGPASSWORD
 
-
+# Verschlüsselungsschlüssel
 ARG ENCRYPTION_KEY
-
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
-CMD ["n8n start"]
+CMD ["n8n", "start"]
