@@ -3,9 +3,8 @@ FROM n8nio/n8n:latest
 USER root
 
 # ➕ ImageMagick installieren
-RUN apt-get update && \
-    apt-get install -y imagemagick && \
-    apt-get clean
+RUN apk update && \
+    apk add imagemagick
 
 USER node
 
