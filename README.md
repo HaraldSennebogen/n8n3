@@ -11,6 +11,7 @@ This template deploys a self-hosted version of [n8n](https://n8n.io/). Internall
 
 ## 💁‍♀️ How to use
 
+
 - Click the Railway button 👆
 - Add the required environment variables
 - Deploy
